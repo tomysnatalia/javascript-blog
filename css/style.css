@@ -5,12 +5,49 @@
 }
 
 body {
-  background: #fff;
-  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  background: #353b48;
+  font-family: "Architects Daughter", cursive;
   color: #444;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
+  text-align: center;
+}
+
+.splash {
+  height: 100vh;
+  position: relative;
+  background-image: url("https://i.postimg.cc/bY6ktr4B/pexels-pixabay-257794.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.splash-inner {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffff;
+}
+
+.title {
+  font-size: 85px;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.title::after {
+  position: absolute;
+  content: '';
+  bottom: 10px;
+  left: 50%;
+  border-radius: 50%;
+  width: 500px;
+  height: 5px;
+  transform: translateX(-50%);
+  background-color: #ffff;
 }
 
 .container {
@@ -19,20 +56,22 @@ body {
 }
 
 .section-title {
-  font-size: 22px;
+  font-size: 20px;
+  background-color: #353b48;
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
+  font-family: "Architects Daughter", cursive;
   font-weight: 600;
 }
 
 .section-title span {
   text-transform: none;
   font-weight: 400;
-  color: #777777;
+  color: darkred;
 }
 
 /* Layout */
 .wrapper {
+  margin-top: 100px;
   display: -ms-flexbox;
   display: flex;
   margin-left: 10px;
@@ -49,20 +88,39 @@ body {
 }
 
 .sidebar, .posts {
-  background: #fff;
+  background-image: url("https://i.postimg.cc/MZgY3tYS/pexels-karolina-grabowska-4033657.jpg");
   margin-right: 10px;
   padding: 40px;
   border: 1px solid #444;
   border-radius: 5px;
+  color: #ffff;
+}
+
+.post-content {
+  background-color: white;
+  color: #353b48;
 }
 
 /* Logo */
 .logo {
-  font-family: "Sacramento", cursive;
+  font-family: "Architects Daughter", cursive;
   font-weight: 400;
-  font-size: 104px;
+  font-size: 70px;
   line-height: 1;
   text-align: center;
+  color: #ffff;
+}
+
+.logo::after {
+  position: absolute;
+  content: '';
+  bottom: -150px;
+  left: 50%;
+  border-radius: 50%;
+  width: 200px;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: #FD7272;
 }
 
 /* Lists */
@@ -74,33 +132,77 @@ body {
 
 .list .active {
   font-weight: bold;
+  color: #FD7272;
 }
 
 .list-horizontal li {
   display: inline-block;
 }
 
+.titles {
+  color: #353b48;
+  font-size: 20px;
+}
+
+.titles li {
+  margin-top: 10px;
+}
+
+a:-webkit-any-link {
+  color: #ffff;
+  cursor: pointer;
+}
+
 /* Authors */
 .authors li {
+  margin-top: 10px;
+  font-size: 20px;
   margin-bottom: 12px;
 }
 
 /* Post */
 .post {
-  display: none;
+  width: 450px;
+  position: absolute;
+  font-size: 18px;
+  display: block;
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 .post.active {
+  position: relative;
+  opacity: 1;
   display: block;
 }
 
 .post-author {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 30px;
   font-style: italic;
+}
+
+.post-title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.tags {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.tags li {
+  margin-bottom: 10px;
 }
 
 .post-tags {
   display: -ms-flexbox;
   display: flex;
+  font-size: 20px;
 }
 
 .post-tags p {
