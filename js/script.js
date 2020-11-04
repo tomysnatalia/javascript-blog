@@ -1,6 +1,6 @@
 'use strict';
 
-function titleClickHandler(){
+function titleClickHandler() {
   event.preventDefault();
   const clickedElement = this;
   console.log('Link was clicked!');
@@ -9,14 +9,14 @@ function titleClickHandler(){
   /*[DONE] remove class 'active' from all article links */
   const activeLinks = document.querySelectorAll('.titles a.active');
 
-  for(let activeLink of activeLinks){
+  for (let activeLink of activeLinks) {
     activeLink.classList.remove('active');
   }
 
   /* [DONE] remove class 'active' from all articles */
   const activeArticles = document.querySelectorAll('.posts article.active');
 
-  for(let activeArticle of activeArticles) {
+  for (let activeArticle of activeArticles) {
     activeArticle.classList.remove('active');
   }
 
@@ -47,14 +47,14 @@ function generateTitleLinks() {
 
   /* remove list of links in left column */
   let titleList = document.querySelector(optTitleListSelector);
-  titleList.innerHTML='';
-	
+  titleList.innerHTML = '';
+
   let articles = document.querySelectorAll(optArticleSelector);
 
   let html = '';
 
   for (const article of articles) {
-  /* get 'id' for each article and save it to a const */
+    /* get 'id' for each article and save it to a const */
     const articleId = article.getAttribute('id');
 
     /* find the correct article using the selector (value of 'title') and save it to const */
@@ -65,7 +65,7 @@ function generateTitleLinks() {
     // console.log(titleList);
 
     /* create HTML code for link and save it to const */
-    const linkHTML = '<li><a href="#' + articleId +'"><span>'+ articleTitle +'</span></a></li>';
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
 
     /* insert the HTML code into titleList */
     html = html + linkHTML;
@@ -77,7 +77,7 @@ function generateTitleLinks() {
   const links = document.querySelectorAll('.titles a');
   console.log(links);
 
-  for(let link of links){
+  for (let link of links) {
     link.addEventListener('click', titleClickHandler);
   }
 }
