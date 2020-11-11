@@ -1,7 +1,6 @@
 
 
 /* Variables */
-
 $color-light: #dcdde1;
 $color-dark: #444;
 
@@ -10,7 +9,6 @@ $font-header: 'Architects Daughter', cursive;
 $font-text: 'Architects Daughter', cursive;
 
 /* Global */
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -111,7 +109,6 @@ body {
 
 
 /* Logo */
-
 .logo {
   font-family: $font-logo;
   font-weight: 400;
@@ -133,9 +130,7 @@ body {
   background-color: #FD7272;
 }
 
-
 /* Lists */
-
 .list {
   list-style-type: none;
   margin: 0;
@@ -177,7 +172,6 @@ a:-webkit-any-link {
 }
 
 /* Post */
-
 .post {
   width: 450px;
   position: absolute;
@@ -222,3 +216,9 @@ a:-webkit-any-link {
     margin: 0 10px 0 0;
   }
 }
+
+.tag-size-5 {
+  font-size: 40px;
+  text-decoration: none;
+}
+
